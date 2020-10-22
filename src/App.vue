@@ -48,7 +48,7 @@ export default {
   },
 
   beforeCreate(){
-    axios.defaults.headers.common['token'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjgwODdiMTA0YzcxMjA0NDNmMzA1MDIiLCJpYXQiOjE2MDIzMDczNTQsImV4cCI6MTYwMjM5Mzc1NH0.RVJKpm7TwM2btK233M10KBuQLg2N5SIRdgM8giZ1a1Q';
+    axios.defaults.headers.common['token'] = 'yourAuthorizationToken';
   },
 
   mounted() {
@@ -58,7 +58,7 @@ export default {
   methods: {
 
     getProducts() {
-      const URL = 'http://localhost:5000/api/product/list';
+      const URL = 'yourUrlToGetData';
       axios.get(URL)
         .catch((err) => {
           console.error(err);
