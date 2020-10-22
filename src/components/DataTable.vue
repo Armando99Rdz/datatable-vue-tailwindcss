@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
-    
-    <h1 class="text-center text-gray-900 text-4xl mt-10 mb-16">Datatable with <span class="font-bold text-indigo-600">Vue</span></h1>
+  <div class="">
+  
+    <h1 class="text-center text-gray-900 text-4xl mt-32 mb-16">Datatable with <span class="font-bold text-indigo-600">Vue</span></h1>
 
-    <div class="p-8 mt-6 mx-4 lg:mt-0 rounded shadow bg-white mb-20">
+    <div class="p-8 mt-6 lg:mt-0 rounded shadow bg-white mb-10">
       <table id="table" class="stripe hover " style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
         <thead>
           <tr>
@@ -23,8 +23,8 @@
             <th class="font-normal">{{product.price}}</th>
             <th class="font-normal">{{product.description}}</th>
             <th class="lg:flex items-center">
-              <button class="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-medium py-2 px-3 mx-auto lg:mr-2 mb-1 lg:mb-0 rounded">Edit</button>
-              <button class="bg-pink-800 hover:bg-pink-700 text-white text-xs font-medium py-2 px-3 mx-auto lg:ml-0 rounded">Delete</button>
+              <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 mr-2 mb-1 lg:mb-0 rounded">Edit</button>
+              <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</button>
             </th>
           </tr>
         </tbody>
@@ -40,7 +40,7 @@ import $ from 'jquery';
 import datatables from 'datatables';
 
 export default {
-  name: 'App',
+  name: 'DataTable',
   data() {
     return {
       products: []
